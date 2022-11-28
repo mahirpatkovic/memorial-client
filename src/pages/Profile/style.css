@@ -1,0 +1,67 @@
+.profilePage {
+    margin: 10px;
+}
+
+.userCard {
+    max-width: 1280px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.userNameAvatarDiv {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.userNameAvatarDiv img {
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+.userAvatarProfilePage {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.userMainInfo {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.userContactInfo {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.additionalInfo {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    .userNameAvatarDiv {
+        width: 100%;
+    }
+    .userMainInfo {
+        width: 98%;
+    }
+    .userContactInfo {
+        width: 98%;
+    }
+    .additionalInfo {
+        width: 98%;
+    }
+}

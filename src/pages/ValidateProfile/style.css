@@ -1,0 +1,20 @@
+.validatePage {
+    margin-top: 50px;
+}
+.validationMessage {
+    background-image: linear-gradient(to bottom right, #585d63, #222831);
+    max-width: 500px;
+    width: 100%;
+    border-radius: 5px;
+}
+.validationMessage h2 {
+    color: #fff;
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+.alertMessage {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+}

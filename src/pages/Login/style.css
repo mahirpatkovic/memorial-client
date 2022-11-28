@@ -1,0 +1,90 @@
+.loginContent {
+    max-width: 400px;
+    text-align: center;
+}
+.loginContent form {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: -1px -1px 8px -1px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: -1px -1px 8px -1px rgba(0, 0, 0, 0.52);
+    box-shadow: -1px -1px 8px -1px rgba(0, 0, 0, 0.52);
+    margin-bottom: 30px;
+}
+.upperBox {
+    /* background-color: #d0f2ff; */
+    background-image: linear-gradient(to bottom right, #585d63, #222831);
+    /* background-color: #04297a; 
+    #393E46
+    #696969
+    */
+    padding: 1px 0 10px 0;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 15px;
+}
+.upperBox h4 {
+    color: #fff;
+    font-family: play;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.upperBox img {
+    width: 65%;
+    margin-bottom: 50px;
+    border-radius: 3px;
+}
+.headingLogin {
+    margin-bottom: 70px;
+    font-family: play;
+    color: #393e46;
+    font-size: 60px;
+    margin-left: 8px;
+}
+.formFieldsBox {
+    width: 90%;
+    margin-left: 2.5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: -1px -1px 8px -1px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: -1px -1px 8px -1px rgba(0, 0, 0, 0.52);
+    box-shadow: -1px -1px 8px -1px rgba(0, 0, 0, 0.52);
+    margin-bottom: 30px;
+    margin-top: -50px;
+    padding: 10px;
+    padding-bottom: 40px;
+}
+
+.forgotPassBtn {
+    font: 14px 'Roboto';
+    margin-top: -110px !important;
+    cursor: pointer;
+    margin-left: 58%;
+    font-weight: bold;
+}
+.registrationBtn {
+    font: 14px 'Roboto';
+    margin-right: 10px;
+    text-align: center;
+}
+.resetPasswordAlert {
+    max-width: 400px;
+    width: 95%;
+    position: fixed;
+    right: 1%;
+    top: 5%;
+    margin: 5px;
+    z-index: 500;
+}
+@media (max-width: 420px) {
+    .headingLogin {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 45px;
+    }
+}

@@ -1,0 +1,16 @@
+.currentUserMenu {
+    font: 16px 'Roboto';
+    font-weight: bold;
+}
+.currentUserMenuEmail {
+    font-family: 'Roboto';
+    margin-top: -10px;
+    color: grey;
+    padding-right: 15px;
+}
+.userAvatarNavMenu {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin: 15px 0 0 15px;
+}

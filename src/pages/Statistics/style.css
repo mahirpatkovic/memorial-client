@@ -1,0 +1,13 @@
+.statisticsPage {
+    margin: 10px;
+}
+
+.statNumbers {
+    margin: 20px 50px 10px;
+}
+
+@media (max-width: 600px) {
+    .statNumbers {
+        margin: 10px 10px 10px;
+    }
+}

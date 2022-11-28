@@ -1,0 +1,82 @@
+.uploadBox {
+    max-width: 400px;
+    margin-top: 30px;
+    width: 100%;
+}
+.dragArea {
+    height: 250px;
+    border: 2px dashed #393e46;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 100%;
+}
+.dragArea.disabled {
+    border: 2px dashed #ccc;
+}
+.dragArea.disabled:hover {
+    cursor: not-allowed;
+}
+.dragArea.disabled .icon {
+    color: grey;
+}
+.dragArea.disabled h3 {
+    color: grey;
+}
+.dragArea:hover {
+    background-color: #ddd;
+}
+.dragArea h3 {
+    font-family: 'Roboto';
+}
+.dragArea p {
+    color: gray;
+    font-family: 'Roboto';
+    margin-top: -10px;
+}
+.dragArea .icon {
+    margin-top: 20px;
+    font-size: 40px;
+    color: #393e46;
+}
+
+.dragArea.active {
+    border: 2px solid #007b55;
+}
+
+.dragArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imageOuter {
+    border-radius: 2px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    width: 100px;
+    height: 100px;
+    padding: 4px;
+    box-sizing: border-box;
+    display: inline-flex;
+}
+
+.imageInner {
+    display: flex;
+    min-width: 0px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.imageInner:hover {
+    opacity: 0.4;
+}
+
+.img {
+    display: block;
+    width: auto;
+    height: 100%;
+}

@@ -1,0 +1,33 @@
+.mainHomeBody {
+    width: 100%;
+    display: flex;
+}
+.dashboardBody {
+    max-width: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    margin-left: 15%;
+    min-height: 100vh;
+}
+@media (max-width: 1280px) {
+    .dashboardBody {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+.contentBody {
+    margin-top: 70px;
+}
+.contentFooter {
+    margin-top: auto;
+}
+.contentFooter p {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 13px;
+    width: 200px;
+    color: #637381;
+}

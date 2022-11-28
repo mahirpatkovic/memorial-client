@@ -1,0 +1,94 @@
+.sidebar {
+    max-width: 15%;
+    width: 100%;
+    font-family: 'Roboto';
+    border-right: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+.sidebarRow {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 30px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 3px;
+    height: 35px;
+}
+
+.sidebarRow:hover {
+    background-color: #f4f6f8;
+}
+.sidebarRow.active {
+    /* border-bottom: 4px solid #2e81f4; */
+    background-color: #ddd;
+    border-right: 3px solid #393e46;
+}
+
+.sidebarRow.active h5 {
+    color: #393e46;
+}
+.sidebarRow h5 {
+    font-weight: 600;
+    color: #637381;
+    margin: 2px 0 0 20px;
+    font-size: 14px;
+}
+
+.sidebarRow .material-icons {
+    font-size: x-large;
+    color: #637381;
+}
+.sidebarRow.active .material-icons {
+    color: #393e46;
+}
+
+.logo {
+    border-radius: 3px;
+    width: 85%;
+    margin-top: 10px;
+    display: block;
+    margin: 20px auto 20px auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+.heading {
+    text-align: center;
+    font: 25px 'Play';
+    color: #393e46;
+    margin: 15px;
+}
+.userAvatar {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+.userNameIcon {
+    background-color: #f4f6f8;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.userNameIcon.active {
+    background-color: #ddd;
+}
+.currentUser {
+    text-align: center;
+    color: #212b36;
+    margin-top: 12px !important;
+}
+.currentUser.active {
+    color: #393e46;
+}
+@media (max-width: 1280px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (min-width: 128px) and (max-width: 1850px) {
+    .sidebar {
+        max-width: 15%;
+    }
+}

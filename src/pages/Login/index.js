@@ -29,6 +29,7 @@ import Service from '../../api/service';
 import { authActions } from '../../store/auth';
 import { useDispatch } from 'react-redux';
 import Loader from '../../components/Loader';
+import axios from 'axios';
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -93,9 +94,9 @@ function Login() {
             dispatch(authActions.login());
             dispatch(authActions.setCurrentUser(res.data.user));
             localStorage.setItem('isLoggedIn', 'true');
-            // localStorage.setItem('token', res.data.token);
-            setIsLoading(false);
-            reset();
+            axios.defaults.headers.common[
+              'Authorization'
+            ] = `Bearer ${res.data.token}`;
           }
         }
       })

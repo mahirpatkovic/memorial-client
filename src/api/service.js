@@ -2,7 +2,7 @@ import axios from 'axios';
 import ENV from '../util/env-config';
 axios.defaults.withCredentials = true;
 // axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem(
-//     'token'
+//   'token'
 // )}`;
 
 class Service {
@@ -23,6 +23,7 @@ class Service {
   }
 
   static login(reqData) {
+    console.log(axios.defaults.headers.common);
     return axios.post(ENV.apiBase + '/users/login', reqData);
   }
 

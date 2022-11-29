@@ -1,10 +1,9 @@
 import axios from 'axios';
 import ENV from '../util/env-config';
 axios.defaults.withCredentials = true;
-// axios.defaults.headers.common['Authorization'] = ;
-//  = `Bearer ${localStorage.getItem(
-//   'token'
-// )}`;
+axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem(
+  'token'
+)}`;
 
 class Service {
   //   static reqConfig() {

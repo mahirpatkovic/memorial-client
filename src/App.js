@@ -6,7 +6,6 @@ import { authActions } from './store/auth';
 import { Alert, Backdrop, Snackbar } from '@mui/material';
 import Loader from './components/Loader';
 import Service from './api/service';
-import axios from 'axios';
 import './appStyle.css';
 
 const theme = createTheme({
@@ -39,10 +38,7 @@ function App() {
           .then((res) => {
             dispatch(authActions.login());
             dispatch(authActions.setCurrentUser(res.data.user));
-            // localStorage.setItem('token', res.data.token);
-            axios.defaults.headers.common[
-              'Authorization'
-            ] = `Bearer ${res.data.token}`;
+            localStorage.setItem('token', res.data.token);
           })
           .catch((err) => {
             setErrorMessage(

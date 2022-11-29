@@ -3,7 +3,7 @@ const ENVIRONMENTS = {
     apiBase: 'http://localhost:4000/api',
   },
   prod: {
-    apiBase: 'ec2-3-121-22-149.eu-central-1.compute.amazonaws.com',
+    apiBase: 'ec2-3-72-61-118.eu-central-1.compute.amazonaws.com',
   },
 };
 

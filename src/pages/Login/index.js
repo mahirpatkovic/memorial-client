@@ -93,7 +93,6 @@ function Login() {
             dispatch(authActions.login());
             dispatch(authActions.setCurrentUser(res.data.user));
             localStorage.setItem('isLoggedIn', 'true');
-            // localStorage.setItem('token', res.data.token);
             setIsLoading(false);
             reset();
           }

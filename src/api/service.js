@@ -1,6 +1,6 @@
 import axios from 'axios';
 import ENV from '../util/env-config';
-// axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
 // axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem(
 //     'token'
 // )}`;
@@ -15,233 +15,166 @@ class Service {
   // }
 
   static getCsrfToken() {
-    return axios.get(ENV.apiBase + '/getCsrfToken', { withCredentials: true });
+    return axios.get(ENV.apiBase + '/getCsrfToken');
   }
 
   static signup(reqData) {
-    return axios.post(ENV.apiBase + '/users/signup', reqData, {
-      withCredentials: true,
-    });
+    return axios.post(ENV.apiBase + '/users/signup', reqData);
   }
 
   static login(reqData) {
-    return axios.post(ENV.apiBase + '/users/login', reqData, {
-      withCredentials: true,
-    });
+    return axios.post(ENV.apiBase + '/users/login', reqData);
   }
 
   static logout() {
-    return axios.get(ENV.apiBase + '/users/logout', { withCredentials: true });
+    return axios.get(ENV.apiBase + '/users/logout');
   }
 
   static validateProfile(reqData) {
     return axios.patch(
-      ENV.apiBase + '/users/validateProfile/' + reqData.validationToken,
-      { withCredentials: true }
+      ENV.apiBase + '/users/validateProfile/' + reqData.validationToken
     );
   }
 
   static userAuthenticated(reqData) {
-    return axios.post(ENV.apiBase + '/users/auth', reqData, {
-      withCredentials: true,
-    });
+    return axios.post(ENV.apiBase + '/users/auth', reqData);
   }
 
   static forgotPassword(reqData) {
-    return axios.post(ENV.apiBase + '/users/forgotPassword', reqData, {
-      withCredentials: true,
-    });
+    return axios.post(ENV.apiBase + '/users/forgotPassword', reqData);
   }
 
   static resetPassword(reqData) {
     return axios.patch(
       ENV.apiBase + '/users/resetPassword/' + reqData.resetToken,
-      reqData.values,
-      { withCredentials: true }
+      reqData.values
     );
   }
 
   static findResetToken(reqData) {
-    return axios.post(ENV.apiBase + '/users/findResetToken', reqData, {
-      withCredentials: true,
-    });
+    return axios.post(ENV.apiBase + '/users/findResetToken', reqData);
   }
 
   static resendValidationEmail(reqData) {
     return axios.patch(
-      ENV.apiBase + '/users/resendValidationEmail/' + reqData.validationToken,
-      { withCredentials: true }
+      ENV.apiBase + '/users/resendValidationEmail/' + reqData.validationToken
     );
   }
 
   static getAllUsers() {
-    return axios.get(ENV.apiBase + '/users', { withCredentials: true });
+    return axios.get(ENV.apiBase + '/users');
   }
 
   static deactivateUser(reqData) {
-    return axios.patch(ENV.apiBase + '/users/deactivateUser', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/users/deactivateUser', reqData);
   }
 
   static activateUser(reqData) {
-    return axios.patch(ENV.apiBase + '/users/activateUser', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/users/activateUser', reqData);
   }
 
   static removeUser(reqData) {
-    return axios.delete(ENV.apiBase + '/users/' + reqData, {
-      withCredentials: true,
-    });
+    return axios.delete(ENV.apiBase + '/users/' + reqData);
   }
 
   static userEditorAdd(reqData) {
-    return axios.patch(ENV.apiBase + '/users/userEditorAdd', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/users/userEditorAdd', reqData);
   }
 
   static userEditorRemove(reqData) {
-    return axios.patch(ENV.apiBase + '/users/userEditorRemove', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/users/userEditorRemove', reqData);
   }
 
   static updateUserProfile(reqData) {
-    return axios.patch(ENV.apiBase + '/users/updateUserProfile', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/users/updateUserProfile', reqData);
   }
 
   static updateUserPassword(reqData) {
-    return axios.patch(ENV.apiBase + '/users/updateUserPassword', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/users/updateUserPassword', reqData);
   }
 
   static createDocument(reqData) {
-    return axios.post(ENV.apiBase + '/documents', reqData, {
-      withCredentials: true,
-    });
+    return axios.post(ENV.apiBase + '/documents', reqData);
   }
 
   static getAllDocuments() {
-    return axios.get(ENV.apiBase + '/documents', { withCredentials: true });
+    return axios.get(ENV.apiBase + '/documents');
   }
 
   static getDocument(reqData) {
-    return axios.get(ENV.apiBase + '/documents/' + reqData.id, {
-      withCredentials: true,
-    });
+    return axios.get(ENV.apiBase + '/documents/' + reqData.id);
   }
 
   static approvePublicAccess(reqData) {
-    return axios.patch(
-      ENV.apiBase + '/documents/approvePublicAccess',
-      reqData,
-      { withCredentials: true }
-    );
+    return axios.patch(ENV.apiBase + '/documents/approvePublicAccess', reqData);
   }
 
   static forbidPublicAccess(reqData) {
-    return axios.patch(ENV.apiBase + '/documents/forbidPublicAccess', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/documents/forbidPublicAccess', reqData);
   }
 
   static deleteDocument(reqData) {
-    return axios.patch(ENV.apiBase + '/documents/deleteDocument', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/documents/deleteDocument', reqData);
   }
 
   static editDocument(reqData) {
-    return axios.patch(ENV.apiBase + '/documents/editDocument', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/documents/editDocument', reqData);
   }
 
   static removeDocument(reqData) {
-    return axios.delete(ENV.apiBase + '/documents/removeDocument/' + reqData, {
-      withCredentials: true,
-    });
+    return axios.delete(ENV.apiBase + '/documents/removeDocument/' + reqData);
   }
 
   static getUserHistoryReview() {
-    return axios.get(ENV.apiBase + '/documents/userHistoryReview', {
-      withCredentials: true,
-    });
+    return axios.get(ENV.apiBase + '/documents/userHistoryReview');
   }
 
   static searchDocument(reqData) {
-    return axios.post(ENV.apiBase + '/documents/searchDocument', reqData, {
-      withCredentials: true,
-    });
+    return axios.post(ENV.apiBase + '/documents/searchDocument', reqData);
   }
 
   static getApprovedDocuments() {
-    return axios.get(ENV.apiBase + '/documents/approvedDocuments', {
-      withCredentials: true,
-    });
+    return axios.get(ENV.apiBase + '/documents/approvedDocuments');
   }
 
   static downloadDocument(reqData) {
-    return axios.patch(ENV.apiBase + '/documents/download', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/documents/download', reqData);
   }
 
   static createRequest(reqData) {
-    return axios.post(ENV.apiBase + '/requests', reqData, {
-      withCredentials: true,
-    });
+    return axios.post(ENV.apiBase + '/requests', reqData);
   }
 
   static getAllRequests() {
-    return axios.get(ENV.apiBase + '/requests', { withCredentials: true });
+    return axios.get(ENV.apiBase + '/requests');
   }
 
   static approveRequest(reqData) {
-    return axios.patch(ENV.apiBase + '/requests/approveRequest', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/requests/approveRequest', reqData);
   }
 
   static declineRequest(reqData) {
-    return axios.patch(ENV.apiBase + '/requests/declineRequest', reqData, {
-      withCredentials: true,
-    });
+    return axios.patch(ENV.apiBase + '/requests/declineRequest', reqData);
   }
 
   static getLastDaysLoginStat() {
-    return axios.get(ENV.apiBase + '/statistics/lastDaysLoginStatistics', {
-      withCredentials: true,
-    });
+    return axios.get(ENV.apiBase + '/statistics/lastDaysLoginStatistics');
   }
 
   static getDobAverageOfUsers() {
-    return axios.get(ENV.apiBase + '/statistics/getDobAverageOfUsers', {
-      withCredentials: true,
-    });
+    return axios.get(ENV.apiBase + '/statistics/getDobAverageOfUsers');
   }
 
   static getCountriesOfUsers() {
-    return axios.get(ENV.apiBase + '/statistics/getCountriesOfUsers', {
-      withCredentials: true,
-    });
+    return axios.get(ENV.apiBase + '/statistics/getCountriesOfUsers');
   }
 
   static getUsersStats() {
-    return axios.get(ENV.apiBase + '/statistics/getUsersStats', {
-      withCredentials: true,
-    });
+    return axios.get(ENV.apiBase + '/statistics/getUsersStats');
   }
 
   static getDocsStats() {
-    return axios.get(ENV.apiBase + '/statistics/getDocsStats', {
-      withCredentials: true,
-    });
+    return axios.get(ENV.apiBase + '/statistics/getDocsStats');
   }
 }
 

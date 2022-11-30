@@ -38,7 +38,6 @@ function App() {
           .then((res) => {
             dispatch(authActions.login());
             dispatch(authActions.setCurrentUser(res.data.user));
-            // localStorage.setItem('token', res.data.token);
           })
           .catch((err) => {
             setErrorMessage(

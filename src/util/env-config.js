@@ -3,7 +3,7 @@ const ENVIRONMENTS = {
     apiBase: 'http://localhost:4000/api',
   },
   prod: {
-    apiBase: 'http://3.127.151.10:4000/api',
+    apiBase: 'http://18.192.37.242:4000/api',
   },
 };
 
